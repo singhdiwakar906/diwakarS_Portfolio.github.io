@@ -1,0 +1,116 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>portfolio</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://kit.fontawesome.com/8956984977.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+	<div id="header">
+		<div class="container">
+			<nav>
+				<font size="50"><span>D</span>iwakar <span>S</span>ingh</font>
+				<ul>
+					<li><a href="#header">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#portfolio">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		<div class="header-text">
+			<h1>Hi !! <br>I am <span>Diwakar</span> From India</h1>
+			
+		</div>
+		</div>
+	</div>
+	<div id="about">
+		<div class= "container">
+			<div class= "row">
+				<div class= "about-col-1">
+					<img src="user.jpg">
+				</div>
+				<div class= "about-col-2">
+					<h1 class="sub-title">About Me</h1>
+					<p>I am a Student and a Tech Enthusiast <br>Love to learn New Technologies <br>Team Player , Self Motivated and Unstopable</p>
+					<div class="tab-title">
+						<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+						<p class="tab-links" onclick="opentab('education')">Education</p>
+						<p class="tab-links" onclick="opentab('experience')">Experience</p>
+					</div>
+					<div class="tab-contents active-tab" id="skills">
+						<ul>
+							<li>Python</li>
+							<li>C / C++</li>
+							<li>Html + Css + Js</li>
+						</ul>
+
+					</div>
+					<div class="tab-contents" id="education">
+						<ul>
+							<li><span>2021-current</span><br>M.C.A.</li>
+							<li><span>2018-2021</span><br>Graduation</li>
+						</ul>
+
+					</div>
+					<div class="tab-contents" id="experience">
+						<ul>
+							<li><span>Web Devlopment</span><br>Design web app</li>
+							<li><span>App Devlopment</span><br>Building windows apps</li>
+						</ul>
+
+					</div>
+			</div>		
+		</div>
+	</div>
+	<!-- Projects-->
+	<div id="portfolio">
+		<div class="container">
+			<h1 class="sub-title">My Projects</h1>
+			<div class="work-list">
+				<div class="work">
+					<img src="work-1.jpg">
+					<div class="layer">
+						<h3>Real/Fake Product identifier</h3>
+						<p>This app allows us to check Authenticity of a product by just Scanning the QR-Code attached to it</p>
+					</div>
+				</div>
+				
+				<div class="work">
+					<img src="work-2.jpg">
+					<div class="layer">
+						<h3>Binary Search Tree Visualizer</h3>
+						<p>It helps to visualize how a BST is created , how a node is inserted and deleted from the tree</p>
+					</div>
+				</div>
+				<div>
+					<!-- -------- -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Contact -->
+	<div class="sub-title">
+		<div id="contact">
+			<h3>Contact Me</h3>
+			<p><i class="fa-solid fa-phone"></i><span>+91 7351241688</span></p>
+			<p><i class="fa-solid fa-envelope"></i><span>singhdiwkar0882@gmail.com</span></p>
+			<p><i class="fa-brands fa-linkedin"></i><span><a href="https://www.linkedin.com/in/diwakarsingh0882/">DiwakarSingh</a></span></p>
+		</div>
+	</div>
+
+		<script>
+			var tablinks = document.getElementsByClassName("tab-links");
+			var tabcontents= document.getElementsByClassName("tab-contents");
+			function opentab(tabname){
+				for(tablink of tablinks){
+				tablink.classList.remove("active-link");
+				}
+				for(tabc of tabcontents){
+				tabc.classList.remove("active-tab");
+				}
+				event.currentTarget.classList.add("active-link");
+				document.getElementById(tabname).classList.add("active-tab");
+			}
+		</script>
+	</body>
+</html>
